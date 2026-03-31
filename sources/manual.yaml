@@ -1,0 +1,9 @@
+# One-off URLs to crawl.
+# Add entries as needed — an empty list produces no error.
+#
+# Format:
+#   urls:
+#     - url: "https://example.com/some-article"
+#       title: "Optional override title"   # omit to use the page's <title>
+#
+urls: []

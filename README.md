@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Profile + AI Intelligence Engine
 
-## Getting Started
+A personal profile site backed by a local AI pipeline that ingests dev/AI news, summarizes it with Ollama, and generates derivative content (news digest, startup ideas, learning paths).
 
-First, run the development server:
+**Live:** [your-domain.vercel.app](https://your-domain.vercel.app)
+
+---
+
+## Stack
+
+| Layer | Tech |
+|-------|------|
+| Frontend | Next.js 14+ App Router, TypeScript, Tailwind CSS |
+| Animations | Framer Motion |
+| Deployment | Vercel |
+| Pipeline | Python 3.11+, Ollama (local LLM) |
+| LLM models | llama3.2 (summarize), mistral:7b (generate) |
+
+---
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Public profile / bio |
+| `/news` | AI-summarized news digest |
+| `/ideas` | Startup ideas generated from news |
+| `/learning` | Learning path suggestions |
+| `/studio` | Local-only review UI (excluded from public build) |
+
+---
+
+## Local Development
+
+**Prerequisites:** Node.js 18+, Python 3.11+, [Ollama](https://ollama.ai) running locally
 
 ```bash
+# Install dependencies
+npm install
+pip install -r requirements.txt
+
+# Create local env file
+echo "STUDIO_ENABLED=true\nIDEAS_ENABLED=true" > .env.local
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## AI Pipeline
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The pipeline runs locally — not on Vercel. Raw data and pipeline code are excluded from the public build via `.vercelignore`.
 
-## Learn More
+```bash
+# Crawl all sources (RSS, GitHub Trending, YouTube)
+PYTHONPATH=. python3 pipeline/run.py --crawl
 
-To learn more about Next.js, take a look at the following resources:
+# Summarize with Ollama (Ollama must be running)
+PYTHONPATH=. python3 pipeline/run.py --digest
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Generate content (news / ideas / learning / all)
+PYTHONPATH=. python3 pipeline/run.py --generate all
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Sources configured in `sources/config.yaml`:**
+- RSS feeds (Hacker News, dev.to, ArXiv CS.AI, newsletters)
+- GitHub Trending
+- YouTube channels (transcripts via yt-dlp)
+- Manual URLs (`sources/manual.yaml`)
 
-## Deploy on Vercel
+**Data flow:**
+```
+crawl → data/knowledge-base.json → digest → pending items → studio review → data/news.json etc.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `STUDIO_ENABLED` | `false` | Enable `/studio` route |
+| `IDEAS_ENABLED` | `false` | Enable `/ideas` route |
+| `NEXT_PUBLIC_SITE_URL` | `https://example.com` | Canonical URL |
+| `OLLAMA_URL` | `http://localhost:11434` | Ollama base URL |
+| `OLLAMA_SUMMARIZE_MODEL` | `llama3.2:latest` | Model for summarization |
+| `OLLAMA_GENERATE_MODEL` | `mistral:7b` | Model for generation |
+
+---
+
+## Architecture
+
+See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the full pipeline diagram.
