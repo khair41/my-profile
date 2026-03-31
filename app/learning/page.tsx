@@ -1,7 +1,6 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import type { LearningItem } from '@/lib/types'
-import learningData from '@/data/learning.json'
 import { LearningContent } from '@/components/learning/LearningContent'
 import { EmptyState } from '@/components/ui/EmptyState'
 
@@ -9,8 +8,17 @@ export const metadata: Metadata = {
   title: 'Learning',
 }
 
-export default function LearningPage() {
-  const items = learningData as LearningItem[]
+// learning.json is local-only and not committed — read at runtime
+export const dynamic = 'force-dynamic'
+
+export default async function LearningPage() {
+  let items: LearningItem[] = []
+  try {
+    const { readDataFile } = await import('@/lib/studio-io')
+    items = readDataFile<LearningItem>('learning')
+  } catch {
+    // file may not exist yet
+  }
 
   if (items.length === 0) {
     return (
