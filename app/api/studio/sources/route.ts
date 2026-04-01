@@ -2,47 +2,14 @@ import { NextRequest } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import yaml from 'js-yaml'
+import type { RssFeedEntry, YoutubeEntry, ManualUrlEntry, SourcesConfig } from '@/types/sources'
 
 export const dynamic = 'force-dynamic'
 
+export type { RssFeedEntry, YoutubeEntry, ManualUrlEntry, SourcesConfig }
+
 const CONFIG_PATH = path.join(process.cwd(), 'sources', 'config.yaml')
 const MANUAL_PATH = path.join(process.cwd(), 'sources', 'manual.yaml')
-
-export interface RssFeedEntry {
-  name: string
-  url: string
-  enabled: boolean
-}
-
-export interface YoutubeEntry {
-  channel_id: string
-  name: string
-  max_videos: number
-  enabled: boolean
-}
-
-export interface GithubEntry {
-  enabled: boolean
-  max_repos: number
-  language: string
-  since: string
-}
-
-export interface ManualUrlEntry {
-  url: string
-  title?: string
-  category?: string
-  notes?: string
-  enabled: boolean
-}
-
-export interface SourcesConfig {
-  request_delay: number
-  rss_feeds: RssFeedEntry[]
-  youtube_channels: YoutubeEntry[]
-  github: GithubEntry
-  manual_urls: ManualUrlEntry[]
-}
 
 function readSources(): SourcesConfig {
   const raw = yaml.load(fs.readFileSync(CONFIG_PATH, 'utf8')) as Record<string, unknown>

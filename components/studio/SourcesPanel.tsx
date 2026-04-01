@@ -6,7 +6,7 @@ import type {
   RssFeedEntry,
   YoutubeEntry,
   ManualUrlEntry,
-} from '@/app/api/studio/sources/route'
+} from '@/types/sources'
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
