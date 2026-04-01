@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
     name: 'Personal Site + AI Engine',
     description:
       'Next.js personal profile with a local Python/Ollama pipeline that crawls, summarises, and generates dev/AI content — reviewed through a private studio interface before publishing.',
-    url: 'https://github.com/kmzsz/my-profile',
+    url: 'https://github.com/khair41/my-profile',
     tags: ['Next.js', 'TypeScript', 'Python', 'Ollama', 'Tailwind'],
   },
 ]

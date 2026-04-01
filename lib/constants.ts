@@ -10,8 +10,8 @@ export const OWNER = {
     'My current work centres on local LLM pipelines, developer tooling, and full-stack web applications. I care about good defaults and clean abstractions.',
     'Outside of engineering I follow the latest in AI research, open-source infrastructure, and early-stage startups.',
   ],
-  avatarUrl: '/avatar.jpg',          // replace with your photo in public/
-  location: 'Your City',
+  avatarUrl: '/avatar.png',          // replace with your photo in public/
+  location: 'Mexico City, Mexico', // optional
 } as const
 
 // ─── Site metadata ─────────────────────────────────────────────────────────────
@@ -19,7 +19,7 @@ export const OWNER = {
 export const SITE = {
   title: `${OWNER.name} — Engineer & Builder`,
   description: OWNER.tagline,
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://my-profile-1h96.vercel.app/',
 } as const
 
 // ─── Navigation ───────────────────────────────────────────────────────────────

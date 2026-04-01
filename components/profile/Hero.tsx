@@ -12,6 +12,7 @@ export function Hero() {
           src={OWNER.avatarUrl}
           alt={OWNER.name}
           fill
+          sizes="80px"
           className="rounded-full object-cover"
           priority
         />
