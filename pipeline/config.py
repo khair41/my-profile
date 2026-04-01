@@ -49,6 +49,7 @@ class PipelineConfig:
     ollama_url: str
     ollama_summarize_model: str
     ollama_generate_model: str
+    ollama_timeout: float
 
 
 _DEFAULT_CONFIG_PATH = Path(__file__).parent.parent / "sources" / "config.yaml"
@@ -87,15 +88,17 @@ def load_config(config_path: str | Path = _DEFAULT_CONFIG_PATH) -> PipelineConfi
 
     manual_urls = _load_manual_urls()
 
+    ollama_raw = raw.get("ollama", {})
     return PipelineConfig(
         request_delay=float(raw.get("request_delay", 1.0)),
         rss_feeds=rss_feeds,
         youtube_channels=youtube_channels,
         github=github,
         manual_urls=manual_urls,
-        ollama_url=os.environ.get("OLLAMA_URL", "http://localhost:11434"),
-        ollama_summarize_model=os.environ.get("OLLAMA_SUMMARIZE_MODEL", "llama3.2:latest"),
-        ollama_generate_model=os.environ.get("OLLAMA_GENERATE_MODEL", "mistral:7b"),
+        ollama_url=os.environ.get("OLLAMA_URL", ollama_raw.get("url", "http://localhost:11434")),
+        ollama_summarize_model=os.environ.get("OLLAMA_SUMMARIZE_MODEL", ollama_raw.get("summarize_model", "llama3.2:latest")),
+        ollama_generate_model=os.environ.get("OLLAMA_GENERATE_MODEL", ollama_raw.get("generate_model", "llama3.2:latest")),
+        ollama_timeout=float(os.environ.get("OLLAMA_TIMEOUT", ollama_raw.get("timeout", 300))),
     )
 
 

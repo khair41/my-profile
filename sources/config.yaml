@@ -75,3 +75,8 @@ github:
   language: ""
   # Optional: filter by time range: daily | weekly | monthly
   since: "daily"
+
+ollama:
+  summarize_model: "llama3.2:latest"
+  generate_model: "qwen2.5:14b"
+  timeout: 300  # seconds; raise if using large models (14B+)

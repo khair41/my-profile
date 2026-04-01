@@ -19,7 +19,9 @@ class GithubCrawler(CrawlerBase):
     def __init__(self, config: PipelineConfig) -> None:
         self._config = config
 
-    def fetch(self, existing_urls: set[str]) -> list[RawArticle]:
+    def fetch(self, existing_urls: set[str], since: datetime | None = None) -> list[RawArticle]:
+        if since:
+            log.debug("GitHub Trending: date filtering not applicable (trending is a snapshot)")
         if not self._config.github.enabled:
             log.info("GitHub Trending: disabled, skipping")
             return []

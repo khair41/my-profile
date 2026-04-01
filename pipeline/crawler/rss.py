@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import calendar
 import re
 import time
 from datetime import datetime, timezone
@@ -24,7 +25,7 @@ class RssCrawler(CrawlerBase):
     def __init__(self, config: PipelineConfig) -> None:
         self._config = config
 
-    def fetch(self, existing_urls: set[str]) -> list[RawArticle]:
+    def fetch(self, existing_urls: set[str], since: datetime | None = None) -> list[RawArticle]:
         articles: list[RawArticle] = []
 
         for feed_cfg in self._config.rss_feeds:
@@ -32,7 +33,7 @@ class RssCrawler(CrawlerBase):
                 log.info("%s: disabled, skipping", feed_cfg.name)
                 continue
             try:
-                new = self._fetch_feed(feed_cfg.name, feed_cfg.url, existing_urls)
+                new = self._fetch_feed(feed_cfg.name, feed_cfg.url, existing_urls, since)
                 log.info("%s: %d new article(s)", feed_cfg.name, len(new))
                 articles.extend(new)
             except Exception as exc:
@@ -47,6 +48,7 @@ class RssCrawler(CrawlerBase):
         name: str,
         url: str,
         existing_urls: set[str],
+        since: datetime | None = None,
     ) -> list[RawArticle]:
         parsed = feedparser.parse(url)
         if parsed.get("bozo") and not parsed.entries:
@@ -58,6 +60,21 @@ class RssCrawler(CrawlerBase):
         for entry in parsed.entries:
             entry_url: str = entry.get("link", "")
             if not entry_url or entry_url in existing_urls:
+                continue
+
+            # Resolve article publication date from feed metadata
+            pub_dt: datetime | None = None
+            if entry.get("published_parsed"):
+                pub_dt = datetime.fromtimestamp(
+                    calendar.timegm(entry.published_parsed), tz=timezone.utc
+                )
+            elif entry.get("updated_parsed"):
+                pub_dt = datetime.fromtimestamp(
+                    calendar.timegm(entry.updated_parsed), tz=timezone.utc
+                )
+
+            # Skip articles older than the cutoff; allow through if date is unknown
+            if since and pub_dt is not None and pub_dt < since:
                 continue
 
             title = _strip_html(entry.get("title", ""))
@@ -76,6 +93,7 @@ class RssCrawler(CrawlerBase):
                     source_name=name,
                     source_type="rss",
                     fetched_at=now,
+                    published_at=pub_dt.isoformat() if pub_dt else None,
                 )
             )
 

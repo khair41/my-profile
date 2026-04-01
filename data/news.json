@@ -1,0 +1,765 @@
+[
+  {
+    "id": "1c821412da41ac4d",
+    "title": "Dynamic Dual-Granularity Skill Bank Improves Agentic RL Success Rates",
+    "summary": "D2Skill, a new dynamic skill bank for reinforcement learning, boosts success rates by up to 20% over baseline methods.",
+    "url": "https://arxiv.org/abs/2603.28716",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "ai/ml",
+      "reinforcement-learning"
+    ],
+    "kb_source_ids": [
+      "619143b83a94ed41"
+    ]
+  },
+  {
+    "id": "7007cfd80ef8a6a6",
+    "title": "LLM-Driven Candidate Assessment System for Human Resources",
+    "summary": "A new system uses LLMs to automate candidate assessment and evaluation in HR, providing transparent results.",
+    "url": "https://arxiv.org/abs/2603.26710",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "llm",
+      "ai",
+      "hr"
+    ],
+    "kb_source_ids": [
+      "a584e5c7c3a2946d"
+    ]
+  },
+  {
+    "id": "28fb3ce1ead4fdcd",
+    "title": "NeiGAD: Improved Graph Anomaly Detection via Spectral Analysis",
+    "summary": "A new plug-and-play module captures neighbor information for enhanced graph anomaly detection, outperforming existing methods.",
+    "url": "https://arxiv.org/abs/2603.28300",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "ai/ml",
+      "graph-theory"
+    ],
+    "kb_source_ids": [
+      "0b84de79572b046d"
+    ]
+  },
+  {
+    "id": "5c28fbc9a63d1561",
+    "title": "CoPE-VideoLM Reduces Overhead in Video Language Modeling",
+    "summary": "This method leverages codec primitives to optimize transformers, reducing time and token usage by up to 86% and 93%, respectively.",
+    "url": "https://arxiv.org/abs/2602.13191",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "kb_source_ids": [
+      "191cd3326a0d8e80"
+    ]
+  },
+  {
+    "id": "cff9ecb1006bdcb2",
+    "title": "Critic-Free Deep Reinforcement Learning for Maritime Coverage Path Planning",
+    "summary": "Proposed framework improves efficiency and stability in coverage path planning on irregular hexagonal grids.",
+    "url": "https://arxiv.org/abs/2603.28385",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "kb_source_ids": [
+      "819b2e360d77989c"
+    ]
+  },
+  {
+    "id": "9b69c05aca53a93f",
+    "title": "Large Language Models May Verbatim Recall Copyrighted Books During Fine-Tuning",
+    "summary": "Fine-tuned LLMs can reproduce up to 85-90% of copyrighted books, bypassing safety measures.",
+    "url": "https://arxiv.org/abs/2603.20957",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "llm",
+      "copyright"
+    ],
+    "kb_source_ids": [
+      "b5251b9d384d270b"
+    ]
+  },
+  {
+    "id": "7035130cca9af42e",
+    "title": "Just-Enough Thinking: Reducing Overthinking in Large Reasoning Models",
+    "summary": "Proposed method improves efficiency without sacrificing accuracy by terminating unnecessary reasoning steps.",
+    "url": "https://arxiv.org/abs/2509.23392",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "llm",
+      "ml-efficiency"
+    ],
+    "kb_source_ids": [
+      "72b16fe0bcf565aa"
+    ]
+  },
+  {
+    "id": "424edaae028fd45b",
+    "title": "Beyond Textual Knowledge for Vision-and-Language Navigation",
+    "summary": "Framework integrates textual and visual knowledge to enhance semantic grounding in vision-language navigation tasks.",
+    "url": "https://arxiv.org/abs/2603.26859",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "ai",
+      "nlp"
+    ],
+    "kb_source_ids": [
+      "a584e5c7c3a2946d"
+    ]
+  },
+  {
+    "id": "dac3578a9482e657",
+    "title": "Spontaneous Functional Differentiation in Large Language Models Resembles Brain Networks",
+    "summary": "LLMs exhibit spontaneous functional differentiation, similar to brain neural connections, enabling complex reasoning.",
+    "url": "https://arxiv.org/abs/2603.29735",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "llm",
+      "ml"
+    ],
+    "kb_source_ids": [
+      "1ee67b2a79f6e10d"
+    ]
+  },
+  {
+    "id": "877a4b5b2452d8b2",
+    "title": "ClawMoat Protects Machines from AI Agent Threats",
+    "summary": "Open-source runtime security tool guards against threats posed by rogue AI agents.",
+    "url": "https://dev.to/hasanmonsur/clawmoat-protecting-your-machine-from-ai-agent-threats-p1o",
+    "source_name": "Dev.to",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "ai-agent",
+      "security"
+    ],
+    "kb_source_ids": [
+      "61eef85211d6a7ac"
+    ]
+  },
+  {
+    "id": "f7cdfcbc9690b4e1",
+    "title": "Axios JavaScript Library Compromised on NPM with Remote Access Trojan",
+    "summary": "Popular Axios library is found to be compromised, containing remote access trojans posing a security threat.",
+    "url": "https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan",
+    "source_name": "Hacker News",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "npm",
+      "security"
+    ],
+    "kb_source_ids": [
+      "191cd3326a0d8e80"
+    ]
+  },
+  {
+    "id": "7ed4e9892f03ea83",
+    "title": "Edge Reliability Gap in Vision-Language Models Under Visual Corruption",
+    "summary": "Research shows distinct failure modes of compressed vision-language models on edge deployment under visual corruption.",
+    "url": "https://arxiv.org/abs/2603.26769",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "llm",
+      "ai/ml"
+    ],
+    "kb_source_ids": [
+      "8db1869af939b3e6"
+    ]
+  },
+  {
+    "id": "79032c3245011913",
+    "title": "LLM-Driven Agentic AI for Human Resources Candidate Assessment",
+    "summary": "Proposes an automated candidate assessment system using large language models to improve HR processes.",
+    "url": "https://arxiv.org/abs/2603.26710",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:03:18.969450+00:00",
+    "tags": [
+      "llm",
+      "ai"
+    ],
+    "kb_source_ids": [
+      "a584e5c7c3a2946d"
+    ]
+  },
+  {
+    "id": "1da23d8d5a31ac08",
+    "title": "Self-Bootstrapping Automated Program Repair with LLMs",
+    "summary": "Proposes using Large Language Models to generate and evaluate synthetic training data for Automated Program Repair, addressing the scarcity of high-quality training data.",
+    "url": "https://arxiv.org/abs/2505.07372",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:09:41.938858+00:00",
+    "tags": [
+      "llm",
+      "automated-program-repair"
+    ],
+    "kb_source_ids": [
+      "self-Bootstrapping-Automated-Program-Repair"
+    ]
+  },
+  {
+    "id": "fc917f5cc7ffcdc0",
+    "title": "Evolutionary Discovery of Reinforcement Learning Algorithms via LLMs",
+    "summary": "Introduces an evolutionary framework for discovering reinforcement learning algorithms using large language models, achieving competitive performance on benchmarks.",
+    "url": "https://arxiv.org/abs/2603.28416",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:09:41.938858+00:00",
+    "tags": [
+      "llm",
+      "reinforcement-learning"
+    ],
+    "kb_source_ids": [
+      "evolutionary-Discovery-of-Reinforcement-Learning-Algorithms-via-LLMs"
+    ]
+  },
+  {
+    "id": "fe8c9d25ddcfb5f0",
+    "title": "OptiMer: Optimal Distribution Vector Merging for Continual Pre-training",
+    "summary": "Proposes OptiMer, a method for optimal distribution vector merging in continual pre-training of large language models, outperforming data mixing and model averaging.",
+    "url": "https://arxiv.org/abs/2603.28858",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:09:41.938858+00:00",
+    "tags": [
+      "llm",
+      "continual-learning"
+    ],
+    "kb_source_ids": [
+      "optimer"
+    ]
+  },
+  {
+    "id": "90315392fca41a07",
+    "title": "Impact of AGENTS.md Files on AI Coding Agents' Efficiency",
+    "summary": "Analyzes the impact of AGENTS.md files on runtime and token consumption for GitHub pull requests, showing lower median runtime with an AGENTS.md file.",
+    "url": "https://arxiv.org/abs/2601.20404",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:09:41.938858+00:00",
+    "tags": [
+      "llm",
+      "devops"
+    ],
+    "kb_source_ids": [
+      "impact-of-agents-md-files-on-ai-coding-agents-efficiency"
+    ]
+  },
+  {
+    "id": "e0d6c3c33af6ef9c",
+    "title": "Multi-agent AI System for TensorFlow to JAX Model Migration",
+    "summary": "Introduces an AI-based multi-agent system that supports the automatic migration of TensorFlow-based deep learning models to JAX, reducing migration time significantly.",
+    "url": "https://arxiv.org/abs/2603.27296",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:09:41.938858+00:00",
+    "tags": [
+      "ml",
+      "devtools"
+    ],
+    "kb_source_ids": [
+      "multi-agent-ai-system-for-tensorflow-to-jax-model-migration"
+    ]
+  },
+  {
+    "id": "e3fb93d1c4a5dc39",
+    "title": "Webscraper: Leveraging MLLMs for Web Scraping",
+    "summary": "Introduces Webscraper, a framework that leverages multimodal large language models to navigate dynamic web applications and extract structured data.",
+    "url": "https://arxiv.org/abs/2603.29161",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:09:41.938858+00:00",
+    "tags": [
+      "ai",
+      "web-scraping"
+    ],
+    "kb_source_ids": [
+      "webscraper"
+    ]
+  },
+  {
+    "id": "31e34d66278f8e28",
+    "title": "AI-Powered Multi-Agent Framework for Spatial Text-to-SQL",
+    "summary": "Introduces an AI-powered multi-agent framework addressing spatial intent, schema ambiguity, and geometry-bearing tables in the context of spatial text-to-sql.",
+    "url": "https://arxiv.org/abs/2510.21045",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:09:41.938858+00:00",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "kb_source_ids": [
+      "from-questions-to-queries-an-ai-powered-multi-agent-framework-for-spatial-text-to-sql"
+    ]
+  },
+  {
+    "id": "93c81618ef94bea8",
+    "title": "WybeCoder Framework for Verified Imperative Code Generation",
+    "summary": "A new agentic code verification framework, WybeCoder, enables 'prove-as-you-generate' development leveraging LLMs and SMT solvers to improve software verification.",
+    "url": "https://arxiv.org/abs/2603.29088",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:15:38.784084+00:00",
+    "tags": [
+      "llm",
+      "verification",
+      "agile development"
+    ],
+    "kb_source_ids": [
+      "6f409f1d43b49870"
+    ]
+  },
+  {
+    "id": "0864c633d31c7a63",
+    "title": "ChartNet Dataset Advances Chart Interpretation for AI/ML Models",
+    "summary": "A multimodal dataset, ChartNet, features 1.5 million diverse chart samples to advance chart interpretation and reasoning capabilities in foundation models.",
+    "url": "https://arxiv.org/abs/2603.27064",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:15:38.784084+00:00",
+    "tags": [
+      "llm",
+      "ai_ml",
+      "devtools"
+    ],
+    "kb_source_ids": [
+      "a4a60592dad70d39"
+    ]
+  },
+  {
+    "id": "24636d9f468bdd2e",
+    "title": "Hybrid Memory for Dynamic Video World Models",
+    "summary": "A novel paradigm, Hybrid Memory, and HyDRA architecture effectively preserve subject identity and motion in video generation tasks.",
+    "url": "https://arxiv.org/abs/2603.25716",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:15:38.784084+00:00",
+    "tags": [
+      "ai",
+      "ml",
+      "computer vision"
+    ],
+    "kb_source_ids": [
+      "cd4156109272ae23"
+    ]
+  },
+  {
+    "id": "556ea5bed90950c6",
+    "title": "Webscraper Framework for Multimodal Large Language Model Web Scraping",
+    "summary": "Framework uses multimodal large language models to navigate dynamic web applications and extract structured data accurately.",
+    "url": "https://arxiv.org/abs/2603.29161",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:15:38.784084+00:00",
+    "tags": [
+      "ai",
+      "ml",
+      "web scraping"
+    ],
+    "kb_source_ids": [
+      "034a5800e9223aaa"
+    ]
+  },
+  {
+    "id": "7990fd6e30f1ef38",
+    "title": "Learning to Select Visual In-Context Demonstrations for MLLMs",
+    "summary": "Proposes a Reinforcement Learning method, LSD agent, for selecting visual in-context demonstrations that outperforms k-Nearest Neighbor approaches.",
+    "url": "https://arxiv.org/abs/2603.26775",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:15:38.784084+00:00",
+    "tags": [
+      "mll",
+      "reinforcement learning",
+      "ai"
+    ],
+    "kb_source_ids": [
+      "a741aa9654e91d7a"
+    ]
+  },
+  {
+    "id": "ae8f70a56f110821",
+    "title": "IMPACT for Open-Set Time Series Anomaly Detection",
+    "summary": "Framework leverages influence modeling to generate realistic anomalies and repurpose high-influential samples as supervised anomalies.",
+    "url": "https://arxiv.org/abs/2603.29183",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:15:38.784084+00:00",
+    "tags": [
+      "ai",
+      "ml",
+      "anomaly_detection"
+    ],
+    "kb_source_ids": [
+      "a741aa9654e91d7a"
+    ]
+  },
+  {
+    "id": "07ab2de04de2fded",
+    "title": "NeiGAD Enhances Graph Anomaly Detection",
+    "summary": "A new module captures neighbor information through spectral analysis, improving graph anomaly detection accuracy.",
+    "url": "https://arxiv.org/abs/2603.28300",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai",
+      "graph theory",
+      "deep learning"
+    ],
+    "kb_source_ids": [
+      "96fbb950f88a750b"
+    ]
+  },
+  {
+    "id": "0bff509cf838cd89",
+    "title": "MolmoPoint Improves VLM Pointing Accuracy",
+    "summary": "Directly selecting visual tokens containing target concepts enhances performance in vision-language models.",
+    "url": "https://arxiv.org/abs/2603.28069",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai",
+      "ml",
+      "vlm"
+    ],
+    "kb_source_ids": [
+      "d1836ba713f1a79e"
+    ]
+  },
+  {
+    "id": "d0b97e82521b476d",
+    "title": "Recycling Memory Processing for Efficient LLM Inference",
+    "summary": "A pipeline optimizing memory processing reduces inference time and energy consumption on heterogeneous systems.",
+    "url": "https://arxiv.org/abs/2603.29002",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "llm",
+      "gpu",
+      "heterogeneous"
+    ],
+    "kb_source_ids": [
+      "008ae384f010775f"
+    ]
+  },
+  {
+    "id": "68a6a316e940e628",
+    "title": "LLM-Driven Candidate Assessment in HR",
+    "summary": "Agentic AI framework uses LLMs to generate structured evaluation reports for transparent candidate assessment.",
+    "url": "https://arxiv.org/abs/2603.26710",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "llm",
+      "ai",
+      "hr"
+    ],
+    "kb_source_ids": [
+      "a584e5c7c3a2946d"
+    ]
+  },
+  {
+    "id": "96fd2f6f577b49f1",
+    "title": "EuraGovExam: A Multilingual Benchmark for Civil Service Exams",
+    "summary": "Over 8,000 high-resolution scanned questions challenge vision-language models with layout-aware and cross-lingual reasoning.",
+    "url": "https://arxiv.org/abs/2603.27223",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai",
+      "ml",
+      "benchmarking"
+    ],
+    "kb_source_ids": [
+      "d99c484f4fdbc63b"
+    ]
+  },
+  {
+    "id": "5865b38d563e8981",
+    "title": "Agentic Image Anonymization Reduces Re-identification Risk",
+    "summary": "Multi-agent reasoning framework improves image anonymization by reducing person re-id risk and preserving image quality.",
+    "url": "https://arxiv.org/abs/2603.27817",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "kb_source_ids": [
+      "9266837d8a505d31"
+    ]
+  },
+  {
+    "id": "e6918771295a081f",
+    "title": "StepCache Reduces Latency in LLM Serving",
+    "summary": "Backend-agnostic caching layer reuses segment-level outputs and verifies changes with lightweight checks, improving performance.",
+    "url": "https://arxiv.org/abs/2603.28795",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "llm",
+      "caching"
+    ],
+    "kb_source_ids": [
+      "d99c484f4fdbc63b"
+    ]
+  },
+  {
+    "id": "10475b7766ea826f",
+    "title": "CoPE-VideoLM Optimizes Video Language Modeling",
+    "summary": "Uses codec primitives and transformer-based encoders to reduce computational overhead in video language models.",
+    "url": "https://arxiv.org/abs/2602.13191",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai",
+      "ml",
+      "video processing"
+    ],
+    "kb_source_ids": [
+      "d99c484f4fdbc63b"
+    ]
+  },
+  {
+    "id": "df6f27b7e6c92174",
+    "title": "Zero-Knowledge Proof in Machine Learning: A Survey",
+    "summary": "Reviews the current state of ZKML research, highlighting challenges and future directions for verifiable machine learning.",
+    "url": "https://arxiv.org/abs/2502.18535",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai/ml",
+      "cryptography"
+    ],
+    "kb_source_ids": [
+      "96fbb950f88a750b"
+    ]
+  },
+  {
+    "id": "b9892ef8cd5f5bbf",
+    "title": "UniGame Self-Adversarial Framework for Unified Models",
+    "summary": "Improves coherence and stability of unified multimodal models by turning them into their own adversaries.",
+    "url": "https://arxiv.org/abs/2511.19413",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai ml",
+      "adversarial training"
+    ],
+    "kb_source_ids": [
+      "d1836ba713f1a79e"
+    ]
+  },
+  {
+    "id": "abf54259c4924542",
+    "title": "Federated Architecture for Sector-Led AI Governance in India",
+    "summary": "Proposes a cohesive approach to mitigate policy fragmentation and connect goals with implementation plans.",
+    "url": "https://arxiv.org/abs/2603.26865",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai",
+      "governance"
+    ],
+    "kb_source_ids": [
+      "9cbe5c65a2b0cf6f"
+    ]
+  },
+  {
+    "id": "3e44ef3ef373417f",
+    "title": "Rectified MeanFlow Overcomes Curvature Bottleneck",
+    "summary": "Leverages geometric principles to learn on straight paths, improving generative modeling.",
+    "url": "https://arxiv.org/abs/2511.23342",
+    "source_name": "ArXiv CS.AI",
+    "published_at": "2026-04-01T08:22:01.974381+00:00",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "kb_source_ids": [
+      "a584e5c7c3a2946d"
+    ]
+  },
+  {
+    "id": "89260fbde478ce24",
+    "title": "ClawMoat Protects Against AI Agent Threats",
+    "summary": "Introducing ClawMoat, an open-source security layer that protects machines from AI agent threats by acting as a 'moat' around credentials and sensitive data.",
+    "url": "https://dev.to/hasanmonsur/clawmoat-protecting-your-machine-from-ai-agent-threats",
+    "source_name": "Dev.to",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "security",
+      "ai"
+    ],
+    "kb_source_ids": [
+      "6125a069107220bd"
+    ]
+  },
+  {
+    "id": "6e8034c23083e14a",
+    "title": "AI Agents Streamline TensorFlow to JAX Model Migration",
+    "summary": "A multi-agent AI system significantly reduces the time needed for migrating deep learning models from TensorFlow to JAX, making use of static analysis and code quality metrics.",
+    "url": "https://arxiv.org/abs/2603.27296",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "machine-learning",
+      "devtools"
+    ],
+    "kb_source_ids": [
+      "191cd3326a0d8e80"
+    ]
+  },
+  {
+    "id": "3883a7a9c772906a",
+    "title": "Disentanglement Framework Boosts Time Series Forecasting Accuracy",
+    "summary": "Dual-Prototype Adaptive Disentanglement (DPAD) framework enhances time series forecasting by dynamically disentangling and leveraging complex temporal patterns.",
+    "url": "https://arxiv.org/abs/2601.16632",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "machine-learning"
+    ],
+    "kb_source_ids": [
+      "9a187f7184d68120"
+    ]
+  },
+  {
+    "id": "5286b173d34e3c26",
+    "title": "CoPE-VideoLM Reduces Video Language Model Overhead",
+    "summary": "CoPE-VideoLM slashes computational overhead in video language models by leveraging codec primitives and optimizing transformer-based encoders.",
+    "url": "https://arxiv.org/abs/2602.13191",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "video-processing"
+    ],
+    "kb_source_ids": [
+      "191cd3326a0d8e80"
+    ]
+  },
+  {
+    "id": "0356937c40d54250",
+    "title": "AI Tooling Dominates Software Engineer Workflows in 2026",
+    "summary": "A survey of over 900 software engineers reveals that AI tool usage will be more prevalent by 2026, with Claude Code leading in tool adoption.",
+    "url": "https://newsletter.pragmaticengineer.com/p/ai-tooling-2026",
+    "source_name": "The Pragmatic Engineer",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "devops"
+    ],
+    "kb_source_ids": [
+      "266657603ccc2b8f"
+    ]
+  },
+  {
+    "id": "94a6179e4ebcc27d",
+    "title": "Webscraper Uses MLLMs for Index-Content Web Scraping",
+    "summary": "Webscraper framework leverages multimodal large language models to navigate dynamic web applications and extract structured data from interactive interfaces.",
+    "url": "https://arxiv.org/abs/2603.29161",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "web-scraping"
+    ],
+    "kb_source_ids": [
+      "61231aecefcf6e10"
+    ]
+  },
+  {
+    "id": "34ccc377dbb4ba46",
+    "title": "Domain-Invariant Prompt Learning Enhances Vision-Language Models",
+    "summary": "DiCoOp framework extends CoOp by learning domain-invariant prompts for vision-language models through adversarial training, improving generalization.",
+    "url": "https://arxiv.org/abs/2603.28555",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "deep-learning"
+    ],
+    "kb_source_ids": [
+      "4c169ba4c71ee458"
+    ]
+  },
+  {
+    "id": "122c3b8447f79661",
+    "title": "Enhancing Policy Learning with World-Action Model",
+    "summary": "World-Action Model (WAM) improves policy learning for manipulation tasks by reasoning over future observations and actions, reducing training steps.",
+    "url": "https://arxiv.org/abs/2603.28955",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "reinforcement-learning"
+    ],
+    "kb_source_ids": [
+      "4c169ba4c71ee458"
+    ]
+  },
+  {
+    "id": "3f5069207d728ad5",
+    "title": "OptiMer Method for Continual Pre-Training Optimization",
+    "summary": "OptiMer method optimizes distribution vector merging in continual pre-training of large language models, outperforming data mixing and model averaging.",
+    "url": "https://arxiv.org/abs/2603.28858",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "pre-training"
+    ],
+    "kb_source_ids": [
+      "4c169ba4c71ee458"
+    ]
+  },
+  {
+    "id": "012329dea9951861",
+    "title": "Security Taxonomy Reveals OpenClaw AI Agent Weaknesses",
+    "summary": "A systematic taxonomy of security vulnerabilities in the OpenClaw AI agent framework highlights structural weaknesses related to per-layer trust enforcement.",
+    "url": "https://arxiv.org/abs/2603.27517",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "security",
+      "ai"
+    ],
+    "kb_source_ids": [
+      "a0abb0cc7d14079f"
+    ]
+  },
+  {
+    "id": "b182a8af6eae5e25",
+    "title": "Scaling Laws Drive AI Progress and Efficiency Game",
+    "summary": "The article explores the effectiveness of scaling laws in AI, abstracting away from realization details to predict progress but also driving a persistent efficiency game.",
+    "url": "https://arxiv.org/abs/2603.28507",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "scalability"
+    ],
+    "kb_source_ids": [
+      "c57a4a90bb2698a0"
+    ]
+  },
+  {
+    "id": "036b09bafd4f0d1e",
+    "title": "SAM 3 Enhances Object Detection and Segmentation Accuracy",
+    "summary": "SAM 3 model improves object detection, segmentation, and tracking accuracy by introducing a presence head and using concept prompts.",
+    "url": "https://arxiv.org/abs/2511.16719",
+    "source_name": "ArXiv",
+    "published_at": "2026-04-01T08:28:35.337041+00:00",
+    "tags": [
+      "ai",
+      "segmentation"
+    ],
+    "kb_source_ids": [
+      "c57a4a90bb2698a0"
+    ]
+  }
+]

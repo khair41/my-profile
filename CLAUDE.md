@@ -57,13 +57,47 @@ All 6 phases complete. Read `docs/PROGRESS.md` before starting any new task.
 ## Common commands
 
 ```
-npm run dev                                        local dev server
-npm run build                                      verify zero TS/ESLint errors
-npm run lint                                       lint only
-PYTHONPATH=. python3 pipeline/run.py --crawl       crawl all sources
-PYTHONPATH=. python3 pipeline/run.py --digest      Ollama summarisation (Ollama must be running)
-PYTHONPATH=. python3 pipeline/run.py --generate all  stage generated content
+npm run dev                                                        local dev server
+npm run build                                                      verify zero TS/ESLint errors
+npm run lint                                                       lint only
+PYTHONPATH=. python3 pipeline/run.py --crawl                      crawl all sources (no date filter on first run)
+PYTHONPATH=. python3 pipeline/run.py --crawl --since 7d           crawl only articles from last 7 days
+PYTHONPATH=. python3 pipeline/run.py --crawl --since 2026-01-01   crawl articles published after ISO date
+PYTHONPATH=. python3 pipeline/run.py --digest                     Ollama summarisation (Ollama must be running)
+PYTHONPATH=. python3 pipeline/run.py --generate all               stage generated content (1 pass)
+PYTHONPATH=. python3 pipeline/run.py --generate all --passes 5    stage content, 5 random passes (initial seeding)
+PYTHONPATH=. python3 pipeline/run.py --publish all                publish all pending items to data/*.json (skip Studio)
 ```
+
+### Pipeline workflows
+
+**Initial seeding** (first time, no cursor exists):
+```
+--crawl → --digest → --generate all --passes 5 → --publish all
+```
+No `--since` needed — fetches everything available. A cursor is written after `--crawl`
+so subsequent runs automatically know where to pick up.
+
+**Ongoing weekly run** (curated via Studio):
+```
+--crawl → --digest → --generate all → review in /studio → approve/reject items
+```
+After the first seeding crawl, omitting `--since` automatically uses the saved cursor
+(`data/crawl-cursor.json`), so only new articles since last week are fetched.
+
+**Force a specific date window** (e.g. after a long gap or to backfill):
+```
+--crawl --since 30d → --digest → --generate all --passes 3 → --publish all
+```
+`--since` overrides the cursor. Use when you want an explicit window regardless of
+when the last crawl ran.
+
+**`--since` formats:**
+- `7d`, `14d`, `30d` — relative (N days back from now)
+- `2026-01-01` — ISO date (UTC midnight)
+
+`--passes N`: each pass samples 30 articles randomly from the top-150 by relevance score,
+so passes produce varied candidates rather than repeating the same top-30.
 
 Local dev requires `.env.local`:
 ```
@@ -99,6 +133,16 @@ Reference: `app/studio/layout.tsx`, `app/ideas/layout.tsx`
 - Mobile responsive (studio UI is desktop-only — 1280 px minimum)
 - Tag pill: `px-2 py-0.5 rounded-full text-xs bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300`
 - Accent chip: `px-2 py-0.5 rounded-full text-xs bg-accent/10 text-accent`
+
+---
+
+## Vercel plugin
+
+The `vercel-plugin` is installed at user scope and provides skills, commands, and agents for Vercel operations. Always prefer these over raw `vercel` CLI invocations when available.
+
+- Use Vercel skills/commands for deployments, environment variables, domains, and project management.
+- Use Vercel agents for multi-step tasks like setting up a new project or diagnosing a failed deployment.
+- Invoke via the Skill tool (e.g., `/deploy`, `/vercel-env`) or the Agent tool with `subagent_type` matching a Vercel agent.
 
 ---
 

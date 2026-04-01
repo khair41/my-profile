@@ -9,7 +9,10 @@
     "lint": "eslint",
     "crawl": "PYTHONPATH=. python3 pipeline/run.py --crawl",
     "digest": "PYTHONPATH=. python3 pipeline/run.py --digest",
-    "ingest": "npm run crawl && npm run digest"
+    "ingest": "npm run crawl && npm run digest",
+    "generate": "PYTHONPATH=. python3 pipeline/run.py --generate all",
+    "publish": "PYTHONPATH=. python3 pipeline/run.py --publish all",
+    "seed": "PYTHONPATH=. python3 pipeline/run.py --generate all --passes 5 && PYTHONPATH=. python3 pipeline/run.py --publish all"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

@@ -39,7 +39,7 @@ class YoutubeCrawler(CrawlerBase):
     def __init__(self, config: PipelineConfig) -> None:
         self._config = config
 
-    def fetch(self, existing_urls: set[str]) -> list[RawArticle]:
+    def fetch(self, existing_urls: set[str], since: datetime | None = None) -> list[RawArticle]:
         articles: list[RawArticle] = []
 
         for ch in self._config.youtube_channels:
@@ -48,7 +48,7 @@ class YoutubeCrawler(CrawlerBase):
                 continue
             channel_url = f"https://www.youtube.com/channel/{ch.channel_id}/videos"
             try:
-                new = self._fetch_channel(ch.name, channel_url, ch.max_videos, existing_urls)
+                new = self._fetch_channel(ch.name, channel_url, ch.max_videos, existing_urls, since)
                 log.info("%s: %d new video(s)", ch.name, len(new))
                 articles.extend(new)
             except Exception as exc:
@@ -62,12 +62,13 @@ class YoutubeCrawler(CrawlerBase):
         channel_url: str,
         max_videos: int,
         existing_urls: set[str],
+        since: datetime | None = None,
     ) -> list[RawArticle]:
         results: list[RawArticle] = []
         now = datetime.now(timezone.utc).isoformat()
 
         with tempfile.TemporaryDirectory() as tmpdir:
-            ydl_opts = {
+            ydl_opts: dict = {
                 "quiet": True,
                 "no_warnings": True,
                 "skip_download": True,
@@ -78,6 +79,8 @@ class YoutubeCrawler(CrawlerBase):
                 "playlistend": max_videos,
                 "ignoreerrors": True,
             }
+            if since:
+                ydl_opts["dateafter"] = since.strftime("%Y%m%d")
 
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 info = ydl.extract_info(channel_url, download=True)
@@ -100,6 +103,16 @@ class YoutubeCrawler(CrawlerBase):
                 raw_vtt = vtt_files[0].read_text(encoding="utf-8", errors="replace")
                 transcript = _vtt_to_text(raw_vtt)[:_MAX_TRANSCRIPT_CHARS]
 
+                upload_date = entry.get("upload_date")  # "YYYYMMDD" or None
+                published_at: Optional[str] = None
+                if upload_date:
+                    try:
+                        published_at = datetime.strptime(upload_date, "%Y%m%d").replace(
+                            tzinfo=timezone.utc
+                        ).isoformat()
+                    except ValueError:
+                        pass
+
                 results.append(
                     RawArticle(
                         id=self._url_to_id(video_url),
@@ -109,6 +122,7 @@ class YoutubeCrawler(CrawlerBase):
                         source_name=channel_name,
                         source_type="youtube",
                         fetched_at=now,
+                        published_at=published_at,
                     )
                 )
 

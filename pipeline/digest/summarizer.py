@@ -76,6 +76,7 @@ def run_digest(kb: KnowledgeBase, config: PipelineConfig, kb_path: Path) -> int:
                     prompt=prompt,
                     model=config.ollama_summarize_model,
                     base_url=config.ollama_url,
+                    timeout=config.ollama_timeout,
                 )
                 if _validate_response(data):
                     result = data

@@ -1,0 +1,719 @@
+[
+  {
+    "id": "ed2cfb5b684068d4",
+    "topic": "Multimodal Large Language Models",
+    "rationale": "The integration of multimodal data into large language models (LLMs) is becoming increasingly important for real-world applications, as seen in the articles about AmodalCG and Hellinger VAE. Understanding how LLMs can process multiple modalities like text and images will be key for future development.",
+    "resources": [
+      {
+        "title": "AmodalCG: Amodal Completion with Multimodal LLM Guidance",
+        "url": "https://arxiv.org/abs/2603.28333",
+        "type": "article"
+      },
+      {
+        "title": "Hellinger VAE for Multimodal Learning",
+        "url": "https://arxiv.org/abs/2601.06572",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 20.0,
+    "tags": [
+      "llm",
+      "nlp",
+      "computer-vision"
+    ],
+    "generated_at": "2026-04-01T08:07:51.656725+00:00",
+    "kb_source_ids": [
+      "748a5160d5446492",
+      "c57a4a90bb2698a0",
+      "b1f78f2278166fb5"
+    ]
+  },
+  {
+    "id": "140ef2c82c15903f",
+    "topic": "Image Generation and Evaluation",
+    "rationale": "With the rise of sophisticated image generation models, understanding how to evaluate their performance on real-world tasks has become crucial. ImagenWorld introduces a comprehensive benchmarking approach that can help guide improvements in this field.",
+    "resources": [
+      {
+        "title": "ImagenWorld: Comprehensive Benchmarking of Image Generation Models",
+        "url": "https://arxiv.org/abs/2603.27862",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 8.0,
+    "tags": [
+      "ai",
+      "ml",
+      "benchmarking"
+    ],
+    "generated_at": "2026-04-01T08:07:51.656725+00:00",
+    "kb_source_ids": [
+      "49fc4282782caa0e",
+      "f66d117d4251c449",
+      "2415c0be33d79af5"
+    ]
+  },
+  {
+    "id": "6d3487e31b2b8564",
+    "topic": "Optimization and Denoising in AI",
+    "rationale": "The field of optimization is crucial for improving the efficiency and reliability of AI models, especially when dealing with large datasets or complex tasks. Techniques like Taming Score-Based Denoisers in ADMM show promising results.",
+    "resources": [
+      {
+        "title": "Taming Score-Based Denoisers in ADMM",
+        "url": "https://arxiv.org/abs/2603.10281",
+        "type": "article"
+      },
+      {
+        "title": "KV Cache Quantization for Self-Forcing Video Generation",
+        "url": "https://arxiv.org/abs/2603.27469",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 20.0,
+    "tags": [
+      "ml",
+      "ai",
+      "optimization"
+    ],
+    "generated_at": "2026-04-01T08:07:51.656725+00:00",
+    "kb_source_ids": [
+      "6e4c99fffb0c4dbe",
+      "d666dc4862c1b9d7",
+      "f449ea667f5c5e04"
+    ]
+  },
+  {
+    "id": "4581005207843de1",
+    "topic": "Reinforcement Learning in Robotics and Maritime Applications",
+    "rationale": "Deep Reinforcement Learning (DRL) has the potential to revolutionize industries like robotics and maritime logistics by enabling more efficient and stable path planning.",
+    "resources": [
+      {
+        "title": "Reinforcement Learning for Maritime Coverage Path Planning",
+        "url": "https://arxiv.org/abs/2603.28385",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 20.0,
+    "tags": [
+      "ai",
+      "ml",
+      "reinforcement-learning"
+    ],
+    "generated_at": "2026-04-01T08:07:51.656725+00:00",
+    "kb_source_ids": [
+      "c57a4a90bb2698a0",
+      "be81313245ddba65",
+      "9f0634693ecf124c"
+    ]
+  },
+  {
+    "id": "ff5f72cc9dc00544",
+    "topic": "Federated Learning and Privacy Preservation",
+    "rationale": "As data privacy concerns grow, federated learning techniques that can maintain model performance while protecting user privacy are becoming increasingly important.",
+    "resources": [
+      {
+        "title": "FedFG: Privacy-Preserving Federated Learning",
+        "url": "https://arxiv.org/abs/2603.27986",
+        "type": "article"
+      },
+      {
+        "title": "Towards Privacy-Preserving LLM Inference via Covariant Obfuscation",
+        "url": "https://arxiv.org/abs/2603.01499",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 20.0,
+    "tags": [
+      "ai",
+      "ml",
+      "fedlearn"
+    ],
+    "generated_at": "2026-04-01T08:07:51.656725+00:00",
+    "kb_source_ids": [
+      "f66d117d4251c449",
+      "8e09fa5da5af2339",
+      "de2ae7a28b97d3bf"
+    ]
+  },
+  {
+    "id": "a68a3856f8ccc734",
+    "topic": "LLM Integration in DevOps and CI/CD",
+    "rationale": "The integration of Large Language Models (LLMs) into Continuous Integration/Continuous Deployment (CI/CD) pipelines can improve testing, documentation generation, and even contribute to automated bug detection.",
+    "resources": [
+      {
+        "title": "AmodalCG: Amodal Completion with Multimodal LLM Guidance",
+        "url": "https://arxiv.org/abs/2603.28333",
+        "type": "article"
+      },
+      {
+        "title": "Hellinger VAE for Multimodal Learning",
+        "url": "https://arxiv.org/abs/2601.06572",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 8.0,
+    "tags": [
+      "llm",
+      "nlp",
+      "ci-cd"
+    ],
+    "generated_at": "2026-04-01T08:07:51.656725+00:00",
+    "kb_source_ids": [
+      "748a5160d5446492",
+      "c57a4a90bb2698a0",
+      "b1f78f2278166fb5"
+    ]
+  },
+  {
+    "id": "9fd0d92192e5dc8b",
+    "topic": "LLM Optimization and Compression",
+    "rationale": "Large language models require efficient optimization and compression techniques to reduce computational costs while maintaining performance.",
+    "resources": [
+      {
+        "title": "KVSculpt: KV Cache Compression as Distillation",
+        "url": "https://arxiv.org/abs/2603.27819",
+        "type": "article"
+      },
+      {
+        "title": "Thin Keys, Full Values: Reducing KV Cache via Low-Dimensional Attention Selection",
+        "url": "https://arxiv.org/abs/2603.04427",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 20.0,
+    "tags": [
+      "llm",
+      "optimization"
+    ],
+    "generated_at": "2026-04-01T08:13:58.432438+00:00",
+    "kb_source_ids": [
+      "9a187f7184d68120",
+      "5b40dbbc54d26cfe",
+      "a1196ae0c13ee939"
+    ]
+  },
+  {
+    "id": "9efa67b3b4d39457",
+    "topic": "AI-Assisted Software Development",
+    "rationale": "Using AI in software development to assist with coding, debugging and understanding codebases.",
+    "resources": [
+      {
+        "title": "AstraAI: LLMs, Retrieval, and AST-Guided Assistance for HPC Codebases",
+        "url": "https://arxiv.org/abs/2603.27423",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 12.0,
+    "tags": [
+      "ai",
+      "software-engineering"
+    ],
+    "generated_at": "2026-04-01T08:13:58.432438+00:00",
+    "kb_source_ids": [
+      "b9f0d2a282364418",
+      "57e2253e3d05d52c"
+    ]
+  },
+  {
+    "id": "31fc9171a1f1fdbd",
+    "topic": "Machine Learning in Healthcare",
+    "rationale": "Applying machine learning techniques to healthcare problems, focusing on medical diagnosis and treatment.",
+    "resources": [
+      {
+        "title": "Advancing Few-Shot Pediatric Arrhythmia Classification with a Novel Contrastive Loss and Multimodal Learning",
+        "url": "https://arxiv.org/abs/2509.19315",
+        "type": "article"
+      }
+    ],
+    "difficulty": "beginner",
+    "estimated_hours": 8.0,
+    "tags": [
+      "ml",
+      "healthcare"
+    ],
+    "generated_at": "2026-04-01T08:13:58.432438+00:00",
+    "kb_source_ids": [
+      "f66d117d4251c449"
+    ]
+  },
+  {
+    "id": "6ebdce7b7147ce25",
+    "topic": "Advanced AI Benchmarks",
+    "rationale": "Benchmarking is essential for evaluating the performance and capabilities of AI models.",
+    "resources": [
+      {
+        "title": "MonitorBench: A Comprehensive Benchmark for Chain-of-Thought Monitorability in Large Language Models",
+        "url": "https://arxiv.org/abs/2603.28590",
+        "type": "article"
+      },
+      {
+        "title": "EuraGovExam: A Multilingual Multimodal Benchmark from Real-World Civil Service Exams",
+        "url": "https://arxiv.org/abs/2603.27223",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 24.0,
+    "tags": [
+      "ai",
+      "ml",
+      "benchmark"
+    ],
+    "generated_at": "2026-04-01T08:13:58.432438+00:00",
+    "kb_source_ids": [
+      "d2e05606c566010b",
+      "a8da91869a4838ac",
+      "732cd143c8436a2c"
+    ]
+  },
+  {
+    "id": "1f029bcf4d64a5b1",
+    "topic": "Model-based Reinforcement Learning Algorithms",
+    "rationale": "Understanding and implementing model-based reinforcement learning algorithms for efficient Q-learning.",
+    "resources": [
+      {
+        "title": "Learning the Model While Learning Q: Finite-Time Sample Complexity of Online SyncMBQ",
+        "url": "https://arxiv.org/abs/2402.11877",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 16.0,
+    "tags": [
+      "rl",
+      "ml"
+    ],
+    "generated_at": "2026-04-01T08:13:58.432438+00:00",
+    "kb_source_ids": [
+      "5b40dbbc54d26cfe"
+    ]
+  },
+  {
+    "id": "b1fa0a9098146479",
+    "topic": "Time Series Forecasting with AI",
+    "rationale": "Utilizing advanced AI techniques for more accurate time series forecasting in various applications.",
+    "resources": [
+      {
+        "title": "Dual-Prototype Disentanglement: A Context-Aware Enhancement Framework for Time Series Forecasting",
+        "url": "https://arxiv.org/abs/2601.16632",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 10.0,
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "generated_at": "2026-04-01T08:13:58.432438+00:00",
+    "kb_source_ids": [
+      "9a187f7184d68120"
+    ]
+  },
+  {
+    "id": "56ae6ab7ad8f482a",
+    "topic": "Efficient Retrieval and Search in Vector Databases",
+    "rationale": "With the increasing use of LLMs and retrieval-augmented generation (RAG) systems, efficient search strategies are crucial for performance.",
+    "resources": [
+      {
+        "title": "Towards Hyper-Efficient RAG Systems in VecDBs",
+        "url": "https://arxiv.org/abs/2511.16681",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 10.0,
+    "tags": [
+      "llm",
+      "vecdb",
+      "ml"
+    ],
+    "generated_at": "2026-04-01T08:19:24.896928+00:00",
+    "kb_source_ids": [
+      "adc107d83bac2a91"
+    ]
+  },
+  {
+    "id": "85d4ad81c9487154",
+    "topic": "Security and Privacy in AI Agents",
+    "rationale": "The article highlights critical security vulnerabilities in AI agents, emphasizing the need for robust policies and practices to ensure trust and safety.",
+    "resources": [
+      {
+        "title": "A Systematic Taxonomy of Security Vulnerabilities in the OpenClaw AI Agent Framework",
+        "url": "https://arxiv.org/abs/2603.27517",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 15.0,
+    "tags": [
+      "ai-agent",
+      "security-vulnerabilities"
+    ],
+    "generated_at": "2026-04-01T08:19:24.896928+00:00",
+    "kb_source_ids": [
+      "a0abb0cc7d14079f"
+    ]
+  },
+  {
+    "id": "b9091256e3ee8ae9",
+    "topic": "Optimization Techniques for Large Models",
+    "rationale": "As models grow larger, optimization becomes more critical to manage resources and improve performance.",
+    "resources": [
+      {
+        "title": "Throughput Optimization as a Strategic Lever in Large-Scale AI Systems",
+        "url": "https://arxiv.org/abs/2603.26823",
+        "type": "article"
+      },
+      {
+        "title": "Thin Keys, Full Values: Reducing KV Cache via Low-Dimensional Attention Selection",
+        "url": "https://arxiv.org/abs/2603.04427",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 20.0,
+    "tags": [
+      "llm",
+      "ml-efficiency"
+    ],
+    "generated_at": "2026-04-01T08:19:24.896928+00:00",
+    "kb_source_ids": [
+      "96fbb950f88a750b",
+      "3c8aa34a7198bfd2"
+    ]
+  },
+  {
+    "id": "787e9851363ebed1",
+    "topic": "Advanced Multimodal Learning Techniques",
+    "rationale": "Multimodal learning is becoming more prevalent, requiring advanced techniques to integrate and understand diverse data types.",
+    "resources": [
+      {
+        "title": "ChartNet: A Million-Scale, High-Quality Multimodal Dataset for Robust Chart Understanding",
+        "url": "https://arxiv.org/abs/2603.27064",
+        "type": "article"
+      },
+      {
+        "title": "ReCQR: Incorporating conversational query rewriting to improve Multimodal Image Retrieval",
+        "url": "https://arxiv.org/abs/2603.26669",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 12.0,
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "generated_at": "2026-04-01T08:19:24.896928+00:00",
+    "kb_source_ids": [
+      "9f0f15f4eca90a84",
+      "65eff473d9a785c4"
+    ]
+  },
+  {
+    "id": "04be90eb99edab6d",
+    "topic": "Efficient Video Processing and Generation with AI",
+    "rationale": "Video processing is resource-intensive, necessitating advanced techniques for efficient handling.",
+    "resources": [
+      {
+        "title": "KV Cache Quantization for Self-Forcing Video Generation: A 33-Method Empirical Study",
+        "url": "https://arxiv.org/abs/2603.27469",
+        "type": "article"
+      },
+      {
+        "title": "TED: Training-Free Experience Distillation for Multimodal Reasoning",
+        "url": "https://arxiv.org/abs/2603.26778",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 25.0,
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "generated_at": "2026-04-01T08:19:24.896928+00:00",
+    "kb_source_ids": [
+      "d666dc4862c1b9d7",
+      "361fc6e108b54296"
+    ]
+  },
+  {
+    "id": "22d6a550026f12d3",
+    "topic": "Large Language Models and Data Attribution",
+    "rationale": "LLMs are increasingly important in software engineering, but their use raises significant ethical concerns around data attribution. Understanding these issues is crucial for developers working with LLMs.",
+    "resources": [
+      {
+        "title": "Sovereign Context Protocol: An Open Attribution Layer for Human-Generated Content",
+        "url": "https://arxiv.org/abs/2603.27094",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 10.0,
+    "tags": [
+      "llm",
+      "data-attribution"
+    ],
+    "generated_at": "2026-04-01T08:25:52.990189+00:00",
+    "kb_source_ids": [
+      "b8179a020dddccea"
+    ]
+  },
+  {
+    "id": "b9d7ac389853ed47",
+    "topic": "Multi-Agent Systems in AI Model Migration",
+    "rationale": "AI-driven multi-agent systems are becoming essential for automating complex tasks such as model migration, which is crucial for modern software engineering practices.",
+    "resources": [
+      {
+        "title": "A Multi-agent AI System for Deep Learning Model Migration",
+        "url": "https://arxiv.org/abs/2603.27296",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 16.0,
+    "tags": [
+      "ml",
+      "devtools"
+    ],
+    "generated_at": "2026-04-01T08:25:52.990189+00:00",
+    "kb_source_ids": [
+      "205997b99595add3"
+    ]
+  },
+  {
+    "id": "30122acf3a061e6b",
+    "topic": "Quantization Techniques for Large Language Models",
+    "rationale": "Mixed-precision quantization is a key technique to optimize the performance of large language models, making them more efficient and accessible.",
+    "resources": [
+      {
+        "title": "MicroMix: Efficient Mixed-Precision Quantization with Microscaling Formats for Large Language Models",
+        "url": "https://arxiv.org/abs/2508.02343",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 12.0,
+    "tags": [
+      "llm",
+      "quantization"
+    ],
+    "generated_at": "2026-04-01T08:25:52.990189+00:00",
+    "kb_source_ids": [
+      "4de5e6ac180b0ae8"
+    ]
+  },
+  {
+    "id": "11f256bda130a06f",
+    "topic": "Building Efficient Software Engineering Pipelines",
+    "rationale": "Efficient build pipelines are critical for modern software development, especially in component-based and DSL-driven projects.",
+    "resources": [
+      {
+        "title": "Inside the Machine: The ISL Build Pipeline",
+        "url": "https://dev.to/francesco_marconi_282058b/inside-the-machine-the-isl-build-pipeline-3epp",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 8.0,
+    "tags": [
+      "build pipelines",
+      "dsls"
+    ],
+    "generated_at": "2026-04-01T08:25:52.990189+00:00",
+    "kb_source_ids": [
+      "4de5e6ac180b0ae8"
+    ]
+  },
+  {
+    "id": "7a84a21342857af5",
+    "topic": "Agentic AI in Human Resources",
+    "rationale": "Using LLM-driven frameworks for candidate assessment can streamline human resource processes, making them more transparent and auditable.",
+    "resources": [
+      {
+        "title": "Agentic AI for Human Resources: LLM-Driven Candidate Assessment",
+        "url": "https://arxiv.org/abs/2603.26710",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 6.0,
+    "tags": [
+      "llm",
+      "ai"
+    ],
+    "generated_at": "2026-04-01T08:25:52.990189+00:00",
+    "kb_source_ids": [
+      "a584e5c7c3a2946d"
+    ]
+  },
+  {
+    "id": "3a75d09c620a1203",
+    "topic": "Efficient Video SDKs in Mobile Development",
+    "rationale": "Selecting the right video SDK for mobile applications requires a thorough understanding of performance and licensing considerations.",
+    "resources": [
+      {
+        "title": "Choosing and Integrating Mobile Video SDKs: FFmpeg, ExoPlayer, and Commercial Options",
+        "url": "https://dev.to/beefedai/choosing-and-integrating-mobile-video-sdks-ffmpeg-exoplayer-and-commercial-options-5hlb",
+        "type": "article"
+      }
+    ],
+    "difficulty": "beginner",
+    "estimated_hours": 4.0,
+    "tags": [
+      "mobile",
+      "video"
+    ],
+    "generated_at": "2026-04-01T08:25:52.990189+00:00",
+    "kb_source_ids": [
+      "b1f78f2278166fb5"
+    ]
+  },
+  {
+    "id": "f8eed32631555ec4",
+    "topic": "Context-Aware Image Anonymization",
+    "rationale": "This topic is crucial in understanding how to protect privacy while maintaining image quality and functionality, particularly with the rise of deep learning models.",
+    "resources": [
+      {
+        "title": "Towards Context-Aware Image Anonymization with Multi-Agent Reasoning",
+        "url": "https://arxiv.org/abs/2603.27817",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 8.0,
+    "tags": [
+      "ai",
+      "ml",
+      "reid"
+    ],
+    "generated_at": "2026-04-01T08:32:26.036704+00:00",
+    "kb_source_ids": [
+      "9266837d8a505d31"
+    ]
+  },
+  {
+    "id": "586f66b29eaaee86",
+    "topic": "Optimizing Throughput in Large-Scale AI Systems",
+    "rationale": "Understanding and implementing throughput optimization is essential for improving the efficiency of large-scale AI systems, especially as models like LLMs become more prevalent.",
+    "resources": [
+      {
+        "title": "Throughput Optimization as a Strategic Lever in Large-Scale AI Systems",
+        "url": "https://arxiv.org/abs/2603.26823",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 20.0,
+    "tags": [
+      "llm",
+      "ai",
+      "devops"
+    ],
+    "generated_at": "2026-04-01T08:32:26.036704+00:00",
+    "kb_source_ids": [
+      "65eff473d9a785c4"
+    ]
+  },
+  {
+    "id": "f3f09a3867b50b83",
+    "topic": "AI-Driven Robotic Manipulation",
+    "rationale": "Vision-language robotic manipulation is a growing area that integrates visual perception and language understanding to enhance the capabilities of robots in real-world environments.",
+    "resources": [
+      {
+        "title": "ProgressVLA: Progress-Guided Diffusion Policy for Vision-Language Robotic Manipulation",
+        "url": "https://arxiv.org/abs/2603.27670",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 12.0,
+    "tags": [
+      "ai",
+      "ml",
+      "robotics"
+    ],
+    "generated_at": "2026-04-01T08:32:26.036704+00:00",
+    "kb_source_ids": [
+      "7537bd56a1901d1a"
+    ]
+  },
+  {
+    "id": "aee194d921125021",
+    "topic": "Emotion Recognition with 3D Pointclouds",
+    "rationale": "This topic explores the use of wearable technology and wireless sensors for continuous emotion recognition, addressing privacy concerns in AI applications.",
+    "resources": [
+      {
+        "title": "Towards Emotion Recognition with 3D Pointclouds Obtained from Facial Expression Images",
+        "url": "https://arxiv.org/abs/2603.27798",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 8.0,
+    "tags": [
+      "ai",
+      "ml",
+      "wearabletech"
+    ],
+    "generated_at": "2026-04-01T08:32:26.036704+00:00",
+    "kb_source_ids": [
+      "4fdc15a4f69e5da5"
+    ]
+  },
+  {
+    "id": "ef31e4dc133eb66c",
+    "topic": "Spatial Text-to-SQL Frameworks",
+    "rationale": "The development and optimization of spatial text-to-SQL frameworks are crucial for improving the accuracy and efficiency of query generation in AI systems.",
+    "resources": [
+      {
+        "title": "From Questions to Queries: An AI-powered Multi-Agent Framework for Spatial Text-to-SQL",
+        "url": "https://arxiv.org/abs/2510.21045",
+        "type": "article"
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimated_hours": 10.0,
+    "tags": [
+      "ai",
+      "ml",
+      "devtools"
+    ],
+    "generated_at": "2026-04-01T08:32:26.036704+00:00",
+    "kb_source_ids": [
+      "5bada77f0710f864"
+    ]
+  },
+  {
+    "id": "e59fa0b7cb63317d",
+    "topic": "Reinforcement Learning for Visual Demonstrations",
+    "rationale": "Selecting visual in-context demonstrations using reinforcement learning is a key area of research, particularly for complex tasks that require multimodal understanding.",
+    "resources": [
+      {
+        "title": "Learning to Select Visual In-Context Demonstrations",
+        "url": "https://arxiv.org/abs/2603.26775",
+        "type": "article"
+      }
+    ],
+    "difficulty": "advanced",
+    "estimated_hours": 15.0,
+    "tags": [
+      "mll",
+      "reinforcement learning",
+      "ai"
+    ],
+    "generated_at": "2026-04-01T08:32:26.036704+00:00",
+    "kb_source_ids": [
+      "034a5800e9223aaa"
+    ]
+  }
+]

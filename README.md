@@ -52,16 +52,62 @@ npm run dev
 
 The pipeline runs locally — not on Vercel. Raw data and pipeline code are excluded from the public build via `.vercelignore`.
 
+### Initial seeding (first run)
+
+No cursor exists yet — crawl fetches everything available in each feed.
+
 ```bash
-# Crawl all sources (RSS, GitHub Trending, YouTube)
+# 1. Crawl all sources (no date filter; cursor is written after this step)
 PYTHONPATH=. python3 pipeline/run.py --crawl
 
-# Summarize with Ollama (Ollama must be running)
+# 2. Summarize with Ollama (Ollama must be running)
 PYTHONPATH=. python3 pipeline/run.py --digest
 
-# Generate content (news / ideas / learning / all)
-PYTHONPATH=. python3 pipeline/run.py --generate all
+# 3. Generate content — multiple passes for broad KB coverage
+PYTHONPATH=. python3 pipeline/run.py --generate all --passes 5
+
+# 4. Publish all pending items directly to data/*.json (skip Studio review)
+PYTHONPATH=. python3 pipeline/run.py --publish all
 ```
+
+### Ongoing weekly run (curated via Studio)
+
+After the first crawl a cursor is saved. Subsequent `--crawl` calls with no `--since`
+flag automatically pick up only articles published since last time.
+
+```bash
+# Fetch only new articles (cursor used automatically)
+PYTHONPATH=. python3 pipeline/run.py --crawl --digest
+PYTHONPATH=. python3 pipeline/run.py --generate all
+# Then open /studio to review and approve items individually
+```
+
+### Backfill or re-seed a specific window
+
+Use `--since` to override the cursor with an explicit date range.
+
+```bash
+# Last 14 days (useful after a gap or to refresh content)
+PYTHONPATH=. python3 pipeline/run.py --crawl --since 14d --digest
+PYTHONPATH=. python3 pipeline/run.py --generate all --passes 3
+PYTHONPATH=. python3 pipeline/run.py --publish all
+
+# Everything since a specific date
+PYTHONPATH=. python3 pipeline/run.py --crawl --since 2026-01-01
+```
+
+### Pipeline flags
+
+| Flag | When to use |
+|------|-------------|
+| `--crawl` | Fetch new articles from all configured sources |
+| `--since DATE` | Limit crawl to articles published after DATE (`7d`, `30d`, `2026-01-01`). Defaults to last crawl cursor if omitted; no filter on first ever run. |
+| `--digest` | Summarize and score crawled articles with Ollama (must be running) |
+| `--generate MODE` | Generate candidates: `news`, `ideas`, `learning`, or `all` |
+| `--passes N` | Run N generation passes, each with a different random article sample (default: 1) |
+| `--publish MODE` | Write all pending items to `data/*.json`, bypassing Studio review |
+
+Each generation pass randomly samples 30 articles from the top-150 by relevance score, so multiple passes produce varied candidates from across the knowledge base.
 
 **Sources configured in `sources/config.yaml`:**
 - RSS feeds (Hacker News, dev.to, ArXiv CS.AI, newsletters)
@@ -71,7 +117,8 @@ PYTHONPATH=. python3 pipeline/run.py --generate all
 
 **Data flow:**
 ```
-crawl → data/knowledge-base.json → digest → pending items → studio review → data/news.json etc.
+crawl → data/knowledge-base.json → digest → --generate (--passes N) → pending items
+  → --publish (auto-approve) OR /studio (manual review) → data/news.json etc.
 ```
 
 ---

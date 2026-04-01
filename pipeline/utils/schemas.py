@@ -12,7 +12,8 @@ class RawArticle(BaseModel):
     body: str                        # plain text, HTML stripped
     source_name: str                 # e.g. "Hacker News", "GitHub Trending"
     source_type: Literal["rss", "github", "youtube", "manual"]
-    fetched_at: str                  # ISO 8601
+    fetched_at: str                  # ISO 8601 — when WE crawled it
+    published_at: Optional[str] = None  # ISO 8601 — article's own publication date (from feed)
     status: Literal["pending_review", "processed", "rejected", "error"] = "pending_review"
     # Populated by digest stage (Phase 3):
     summary: Optional[str] = None

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import random
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -15,6 +16,7 @@ log = get_logger(__name__)
 MAX_LEARNING = 6
 _MIN_RELEVANCE = 0.5
 _MAX_SOURCE_ARTICLES = 20
+_POOL_SIZE = 100  # sample from top-N by relevance to add variety across runs
 
 _PROMPT_TEMPLATE = """\
 You are a technical learning path designer. Below are {count} recent articles about software engineering and AI.
@@ -101,12 +103,13 @@ def run_generate_learning(kb: KnowledgeBase, config: PipelineConfig, kb_path: Pa
     Generate learning path items from processed KB articles.
     Stages results in kb.pending_learning[]. Returns count of new items added.
     """
-    source_articles = [
+    pool = [
         a for a in kb.items
         if a.status == "processed" and (a.relevance_score or 0) >= _MIN_RELEVANCE
     ]
-    source_articles.sort(key=lambda a: a.relevance_score or 0, reverse=True)
-    source_articles = source_articles[:_MAX_SOURCE_ARTICLES]
+    pool.sort(key=lambda a: a.relevance_score or 0, reverse=True)
+    pool = pool[:_POOL_SIZE]
+    source_articles = random.sample(pool, min(_MAX_SOURCE_ARTICLES, len(pool)))
 
     if not source_articles:
         log.warning("No processed articles with relevance >= %.1f — skipping learning generation", _MIN_RELEVANCE)
@@ -122,6 +125,7 @@ def run_generate_learning(kb: KnowledgeBase, config: PipelineConfig, kb_path: Pa
                 prompt=prompt,
                 model=config.ollama_generate_model,
                 base_url=config.ollama_url,
+                timeout=config.ollama_timeout,
             )
             items = data.get("learning_paths", [])
             if not isinstance(items, list) or not items:

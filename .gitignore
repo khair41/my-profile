@@ -44,7 +44,11 @@ yarn-error.log*
 next-env.d.ts
 
 # local-only data
-data/
+data/ideas.json
+data/knowledge-base.json
+
+# pipeline logs
+logs/
 
 # python
 __pycache__/

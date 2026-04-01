@@ -34,9 +34,11 @@ class ManualCrawler(CrawlerBase):
     def __init__(self, config: PipelineConfig) -> None:
         self._config = config
 
-    def fetch(self, existing_urls: set[str]) -> list[RawArticle]:
+    def fetch(self, existing_urls: set[str], since: datetime | None = None) -> list[RawArticle]:
         entries = self._config.manual_urls
 
+        if since:
+            log.debug("Manual crawler: date filtering not applicable (static URLs)")
         if not entries:
             log.info("Manual crawler: no URLs configured")
             return []

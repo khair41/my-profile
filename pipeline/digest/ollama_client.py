@@ -9,7 +9,7 @@ from pipeline.utils.logger import get_logger
 log = get_logger(__name__)
 
 
-def generate(prompt: str, model: str, base_url: str) -> dict:
+def generate(prompt: str, model: str, base_url: str, timeout: float = 300) -> dict:
     """
     Call Ollama /api/generate with JSON mode.
 
@@ -25,7 +25,7 @@ def generate(prompt: str, model: str, base_url: str) -> dict:
     }
 
     try:
-        resp = httpx.post(url, json=payload, timeout=120)
+        resp = httpx.post(url, json=payload, timeout=timeout)
         resp.raise_for_status()
     except httpx.HTTPError as exc:
         raise ValueError(f"Ollama HTTP error: {exc}") from exc
