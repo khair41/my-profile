@@ -2,7 +2,7 @@
 
 A personal profile site backed by a local AI pipeline that ingests dev/AI news, summarizes it with Ollama, and generates derivative content (news digest, startup ideas, learning paths).
 
-**Live:** [your-domain.vercel.app](https://your-domain.vercel.app)
+**Live:** [my-profile-1h96.vercel.app](https://my-profile-1h96.vercel.app/)
 
 ---
 
