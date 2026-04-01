@@ -17,6 +17,42 @@ rss_feeds:
     url: "https://newsletter.pragmaticengineer.com/feed"
     enabled: true
 
+  # AI labs & research
+  - name: "OpenAI Blog"
+    url: "https://openai.com/news/rss.xml"
+    enabled: true
+  - name: "Google DeepMind"
+    url: "https://deepmind.google/blog/rss.xml"
+    enabled: true
+  - name: "Hugging Face Blog"
+    url: "https://huggingface.co/blog/feed.xml"
+    enabled: true
+  - name: "Meta AI Blog"
+    url: "https://ai.meta.com/blog/rss/"
+    enabled: true
+
+  # Engineering blogs
+  - name: "Netflix Tech Blog"
+    url: "https://netflixtechblog.com/feed"
+    enabled: true
+  - name: "Cloudflare Blog"
+    url: "https://blog.cloudflare.com/rss/"
+    enabled: true
+  - name: "GitHub Engineering"
+    url: "https://github.blog/category/engineering/feed/"
+    enabled: true
+  - name: "Stripe Engineering"
+    url: "https://stripe.com/blog/engineering/feed/rss"
+    enabled: true
+
+  # AI infra & tooling
+  - name: "NVIDIA Developer Blog"
+    url: "https://developer.nvidia.com/blog/feed/"
+    enabled: true
+  - name: "AWS Machine Learning Blog"
+    url: "https://aws.amazon.com/blogs/machine-learning/feed/"
+    enabled: true
+
 youtube_channels:
   # Each entry: channel_id + display name + how many recent videos to fetch
   - channel_id: "UCXv9OlKR0jYAMPfeLpNqNsg"   # Andrej Karpathy
