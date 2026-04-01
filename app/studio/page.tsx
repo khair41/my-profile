@@ -4,10 +4,11 @@ import { useEffect, useState } from 'react'
 import { ReviewQueue } from '@/components/studio/ReviewQueue'
 import { ApprovalBucket } from '@/components/studio/ApprovalBucket'
 import { GeneratePanel } from '@/components/studio/GeneratePanel'
+import { SourcesPanel } from '@/components/studio/SourcesPanel'
 import type { RawArticle } from '@/lib/studio-io'
 import type { NewsItem, IdeaItem, LearningItem } from '@/lib/types'
 
-type Tab = 'queue' | 'news' | 'ideas' | 'learning' | 'generate'
+type Tab = 'queue' | 'news' | 'ideas' | 'learning' | 'generate' | 'sources'
 
 interface StudioData {
   queue: RawArticle[]
@@ -22,6 +23,7 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'ideas', label: 'Ideas' },
   { id: 'learning', label: 'Learning' },
   { id: 'generate', label: 'Generate' },
+  { id: 'sources', label: 'Sources' },
 ]
 
 export default function StudioPage() {
@@ -90,7 +92,11 @@ export default function StudioPage() {
       </div>
 
       {/* Content */}
-      {loading ? (
+      {tab === 'sources' ? (
+        <SourcesPanel />
+      ) : tab === 'generate' ? (
+        <GeneratePanel />
+      ) : loading ? (
         <div className="py-16 text-center text-zinc-500 text-sm">Loading…</div>
       ) : (
         <>
@@ -118,7 +124,6 @@ export default function StudioPage() {
               onAction={() => void load()}
             />
           )}
-          {tab === 'generate' && <GeneratePanel />}
         </>
       )}
     </div>

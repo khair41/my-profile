@@ -20,6 +20,9 @@ class GithubCrawler(CrawlerBase):
         self._config = config
 
     def fetch(self, existing_urls: set[str]) -> list[RawArticle]:
+        if not self._config.github.enabled:
+            log.info("GitHub Trending: disabled, skipping")
+            return []
         params: dict[str, str] = {"since": self._config.github.since}
         if self._config.github.language:
             params["l"] = self._config.github.language

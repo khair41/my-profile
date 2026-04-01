@@ -1,9 +1,12 @@
 # One-off URLs to crawl.
 # Add entries as needed — an empty list produces no error.
 #
-# Format:
+# Full format:
 #   urls:
 #     - url: "https://example.com/some-article"
 #       title: "Optional override title"   # omit to use the page's <title>
+#       category: "AI"                     # optional label for organisation
+#       notes: "Why I added this"          # optional reminder to yourself
+#       enabled: true                      # set false to skip without deleting
 #
 urls: []

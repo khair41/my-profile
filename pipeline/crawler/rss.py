@@ -28,6 +28,9 @@ class RssCrawler(CrawlerBase):
         articles: list[RawArticle] = []
 
         for feed_cfg in self._config.rss_feeds:
+            if not feed_cfg.enabled:
+                log.info("%s: disabled, skipping", feed_cfg.name)
+                continue
             try:
                 new = self._fetch_feed(feed_cfg.name, feed_cfg.url, existing_urls)
                 log.info("%s: %d new article(s)", feed_cfg.name, len(new))

@@ -43,6 +43,9 @@ class YoutubeCrawler(CrawlerBase):
         articles: list[RawArticle] = []
 
         for ch in self._config.youtube_channels:
+            if not ch.enabled:
+                log.info("%s: disabled, skipping", ch.name)
+                continue
             channel_url = f"https://www.youtube.com/channel/{ch.channel_id}/videos"
             try:
                 new = self._fetch_channel(ch.name, channel_url, ch.max_videos, existing_urls)

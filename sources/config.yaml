@@ -3,28 +3,37 @@ request_delay: 1.0   # seconds between HTTP requests
 rss_feeds:
   - name: "Hacker News"
     url: "https://news.ycombinator.com/rss"
+    enabled: true
   - name: "dev.to"
     url: "https://dev.to/feed"
+    enabled: true
   - name: "ArXiv CS.AI"
     url: "https://arxiv.org/rss/cs.AI"
+    enabled: true
   - name: "Simon Willison"
     url: "https://simonwillison.net/atom/everything/"
+    enabled: true
   - name: "The Pragmatic Engineer"
     url: "https://newsletter.pragmaticengineer.com/feed"
+    enabled: true
 
 youtube_channels:
   # Each entry: channel_id + display name + how many recent videos to fetch
   - channel_id: "UCXv9OlKR0jYAMPfeLpNqNsg"   # Andrej Karpathy
     name: "Andrej Karpathy"
     max_videos: 3
+    enabled: true
   - channel_id: "UCsBjURrPoezykLs9EqgamOA"   # Fireship
     name: "Fireship"
     max_videos: 3
+    enabled: true
   - channel_id: "UC0RhatS1pyxInC00YKjjBqQ"   # Marques Brownlee (MKBHD) – swap as needed
     name: "AI Explained"
     max_videos: 3
+    enabled: true
 
 github:
+  enabled: true
   max_repos: 25
   # Optional: filter by language (leave empty for all languages)
   language: ""

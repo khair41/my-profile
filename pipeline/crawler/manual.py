@@ -2,12 +2,10 @@ from __future__ import annotations
 
 import time
 from datetime import datetime, timezone
-from pathlib import Path
 from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
 
 import httpx
-import yaml
 from readability import Document
 
 from pipeline.config import PipelineConfig
@@ -17,7 +15,6 @@ from pipeline.utils.schemas import RawArticle
 
 log = get_logger(__name__)
 
-_MANUAL_YAML = Path(__file__).parent.parent.parent / "sources" / "manual.yaml"
 _USER_AGENT = "Mozilla/5.0 (compatible; my-profile-crawler/1.0)"
 
 
@@ -38,8 +35,7 @@ class ManualCrawler(CrawlerBase):
         self._config = config
 
     def fetch(self, existing_urls: set[str]) -> list[RawArticle]:
-        raw = yaml.safe_load(_MANUAL_YAML.read_text(encoding="utf-8")) or {}
-        entries = raw.get("urls") or []
+        entries = self._config.manual_urls
 
         if not entries:
             log.info("Manual crawler: no URLs configured")
@@ -49,8 +45,11 @@ class ManualCrawler(CrawlerBase):
         now = datetime.now(timezone.utc).isoformat()
 
         for entry in entries:
-            url: str = entry.get("url", "")
-            if not url or url in existing_urls:
+            if not entry.enabled:
+                log.info("Manual: '%s' disabled, skipping", entry.url)
+                continue
+            url = entry.url
+            if url in existing_urls:
                 continue
 
             if not _robots_allowed(url):
@@ -58,7 +57,7 @@ class ManualCrawler(CrawlerBase):
                 continue
 
             try:
-                article = self._fetch_article(url, entry.get("title"), now)
+                article = self._fetch_article(url, entry.title, now)
                 results.append(article)
                 log.info("Manual: fetched '%s'", article.title)
             except Exception as exc:
